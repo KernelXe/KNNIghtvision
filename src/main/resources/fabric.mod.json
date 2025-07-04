@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "knnightvision",
+  "version": "${version}",
+  "name": "KNNIghtvision",
+  "description": "Event-SiamGame",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/knnightvision/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.Kernelz.KNSystem.knnightvision.client.KnnightvisionClient"
+    ],
+    "main": [
+      "org.Kernelz.KNSystem.knnightvision.Knnightvision"
+    ]
+  },
+  "mixins": [
+    "knnightvision.mixins.json",
+    {
+      "config": "knnightvision.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
